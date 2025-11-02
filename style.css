@@ -30,6 +30,13 @@ body {
   margin-bottom: 10px;
 }
 
+/* loreal title */
+.loreal-title img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
 /* chat window */
 .chatbox {
   margin: 40px 0;
