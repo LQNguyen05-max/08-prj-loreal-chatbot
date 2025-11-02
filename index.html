@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat Assistant</title>
+    <title>L'Oreal Chatbot</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Bodoni+Moda:wght@700&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
       rel="stylesheet"
@@ -16,55 +17,68 @@
   </head>
 
   <body>
-    <div class="page-wrapper">
-      <!------- Header / Branding ------->
-      <!-- Need to make logo  -->
-      <header class="site-header">
-        <div class="loreal-title">
-          <img src="/img/loreal-logo.png"/ alt="Loreal Logo">
-        </div>
-        <h1 class="site-title">Smart Product Advisor</h1>
-      </header>
+      <nav class="top-navbar">
+        <marquee behavior="scroll" direction="left" scrollamount="10" loop="infinite">
+          <p class="discount-scroll"> Discounts Offer: Use Code <strong style="color:black">LOREAL10</strong> for 10% off off your order! First-time customer can use CODE: <strong style="color:black">FIRST20</strong> for 20% off. Offers valid for a limited time. Only one discount per customer. </p>
+        </marquee>
+      </nav>
 
-      <!------- Chat Area ------->
-      <main>
-        <section class="chatbox">
-          <div id="chatWindow" class="chat-window">
-            <!-- messages will be appended here via JS -->
+      <div class="container-layout">
+        <div class="page-wrapper">
+        <!------- Header / Branding ------->
+        <header class="site-header">
+          <div class="loreal-title">
+            <img src="/img/loreal-logo.png"/ alt="Loreal Logo">
           </div>
+          <h1 class="site-title">Smart Product Advisor</h1>
+        </header>
 
-          <form id="chatForm" class="chat-form">
-            <label for="userInput" class="visually-hidden">Message</label>
-            <input
-              id="userInput"
-              name="userInput"
-              type="text"
-              placeholder="Ask me about products or routines…"
-              autocomplete="off"
-              required
-            />
-            <button type="submit" id="sendBtn">
-              <span class="material-icons">send</span>
-              <span class="visually-hidden">Send</span>
-            </button>
-          </form>
-        </section>
-      </main>
+        <!------- Chat Area ------->
+        
+          <main class="main-content">
+            <section class="chatbox">
+              <div id="chatWindow" class="chat-window">
+                <!-- messages will be appended here via JS -->
+              </div>
 
-      <!------- Footer Links ------->
-      <footer class="site-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
-        <nav>
-          <!-- These URLs are placeholders -->
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Contact</a>
-        </nav>
-      </footer>
-    </div>
+              <form id="chatForm" class="chat-form">
+                <label for="userInput" class="visually-hidden">Message</label>
+                <input
+                  id="userInput"
+                  name="userInput"
+                  type="text"
+                  placeholder="Ask me about products or routines…"
+                  autocomplete="off"
+                  required
+                />
+                <button type="submit" id="sendBtn">
+                  <span class="material-icons">send</span>
+                  <span class="visually-hidden">Send</span>
+                </button>
+              </form>
+              <button id="restartBtn" class="chat-reset-btn">Reset Conversation</button>
+            </section>
+          </main>
+        </div>
+      </div>
+
+
+
+      
+    <footer class="site-footer">
+      <div class="loreal-footer">
+          <img src="/img/loreal-logo.png" alt="Loreal Logo"/>
+      </div>
+      <p>&copy; 2025 L'Oreal. All rights reserved.</p>
+      <nav>
+        <!-- These URLs are placeholders -->
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact</a>
+      </nav>
+    </footer>
 
     <!-- secrets.js can be removed when using Cloudflare Workers for API requests -->
-    <script src="secrets.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
